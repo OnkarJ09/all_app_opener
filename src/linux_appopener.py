@@ -43,7 +43,7 @@ def get_app_loc():
     return apps
 
 
-def load_apps():
+def update_list_thing():
     """
     It will look for the list of apps list if not exists it will create one.
     :return: list_apps.json
@@ -54,11 +54,11 @@ def load_apps():
     else:
         with open(PATH_APP_LIST, "w") as f:
             apps = get_app_loc()
-            save_apps(apps)
+            save(apps)
             return apps
 
 
-def save_apps(apps):
+def save(apps):
     """
     It will save the list of apps.
     :param apps: str
@@ -107,7 +107,7 @@ def get_window():
 
 #  ------------     Opening Applications     ----------------------
 
-def open_apps(app_name, apps):
+def open_thing(app_name, apps):
     """
     It will open an app based on its name.
     :param app_name: str
@@ -150,7 +150,7 @@ def get_window_in_current_workspace():
     except Exception as e:
         print(f"Error getting window id: {e}")
 
-def close_apps(app_name):
+def close_thing(app_name):
     """
     It will close an app based on its name.
     :param app_name: str

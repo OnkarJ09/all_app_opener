@@ -1,2 +1,5 @@
 # To exclude the pycharm data
 .idea/*
+
+# To exclude pycache
+*/__pycache__/*
